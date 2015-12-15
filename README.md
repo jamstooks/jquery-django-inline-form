@@ -1,7 +1,11 @@
 # jquery-django-inline-form
 Quick JQuery plugin for expanding django inline forms - designed specifically for django's inline formsets
 
+[DEMO](http://jsfiddle.net/jamstooks/fz6wv5L0/2/)
+
 ## Usage
+
+    <script src="/path/to/jquery-django-inline-form/django-inline-form.js"></script>
 
 ### Your Django Form
 
