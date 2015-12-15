@@ -73,6 +73,7 @@
       $(self.containerId).children().last().hide('slow', function(){
         $(self.containerId).children().last().remove();
       });
+      $(self.totalFormsId).attr('value', $(self.containerId).children().length);
       // some animate to scroll up 
       if(self.formHeight != null) {
         $('html, body').animate({
