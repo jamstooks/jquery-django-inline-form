@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>jquery-django-inline-forms demo</title>
+</head>
+<body>  
+<!-- https://github.com/jamstooks/jquery-django-inline-form -->
+
+<h3>Management Form</h3>
+
+Total: <input id="id_authors-TOTAL_FORMS" name="authors-TOTAL_FORMS" disabled="disabled" value="0" /><br>
+Initial: <input id="id_authors-INITIAL_FORMS" name="authors-INITIAL_FORMS" disabled="disabled" value="0" /><br>
+Min: <input id="id_authors-MIN_NUM_FORMS" name="authors-MIN_NUM_FORMS" disabled="disabled" value="0" /><br>
+Max: <input id="id_authors-MAX_NUM_FORMS" name="authors-MAX_NUM_FORMS" disabled="disabled" value="5" /><br>
+
+<div id="authors-container">
+  
+</div>
+
+<div>
+  <button id="add-author" type="button">Add</button>
+  <button id="authors-delete" type="button">Delete</button>
+</div>
+
+<!-- the template -->
+<script type="text/html" id="authors-template">
+  <fieldset class="authors-fieldset-__prefix__" style="display: none;">
+  
+    <label class="label" for="id_authors-__prefix__-name">Name:</label>
+    <input id="id_authors-__prefix__-name" maxlength="100" name="authors-__prefix__-name" type="text" />
+
+    <br>
+    <label class="label" for="id_authors-__prefix__-email">Email:</label>
+    <input id="id_authors-__prefix__-email" maxlength="254" name="authors-__prefix__-email" type="email" />
+      
+  </fieldset>
+</script>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="django-inline-form.js"></script>
+
+<script>
+$('#add-author').djangoInlineFormAdd({
+  prefix: "authors",
+  formHeight: 50,
+});
+</script>
+</body>
+</html>
